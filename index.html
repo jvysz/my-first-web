@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>九也随之的第一个网页</title>
+<style>
+.two-columns {
+    display: flex;
+    gap: 30px;
+    margin-top:20px ;
+}
+.left {
+   flex: 2;
+}
+.right {
+   flex: 1;
+   text-align: center;
+}
+.right img {
+   max-width: 100%;
+   height: auto;
+}
+   h2 {
+      border-left: 5px solid #e9967a;
+      padding-left: 15px;
+   }
+     body {
+       background-color: #fdf5e6 ;
+       font-family: Arial,sans-serif;
+       margin: 0;padding: 20px;
+  }
+.container {
+   max-width: 800px;
+   margin: 0 auto;
+   background: white;
+   padding: 30px;
+   border-radius: 20px;
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+}
+     h1 {
+        color: #e9967a;
+        border-bottom: 2px solid #ff9900;
+        padding-bottom: 10px;
+        }
+     img{
+      max-width: 20%;
+      border-radius: 15px;
+      border: 2px solid yellow;
+      margin: 15px 0;
+     }
+     a {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+     }
+     a:hover {
+        text-decoration: underline;
+     }
+.hobby-list {
+   background: #fff8f0;
+   padding: 15px 25px;
+   border-radius: 15px;
+}
+</style>
+
+</head>
+<body>
+   <div class="container">
+        <h1>你好，我是九也随之</h1>
+        <p>我是一名大一学生，正在学习编程。</p>
+   <div class="two-columns">
+      <div class="left">
+        <h2>关于我</h2>
+        <p>喜欢<b>玩游戏</b>，<b>看小说</b>，经常冲浪称得上是个<b>梗百科</b>。目前正在<b>从零基础出发学习编程</b></p>
+
+        <h2>我的爱好</h2>
+      <div class="hobby-list">
+        <ul>
+               <li>打游戏（<b>最爱我的世界、三角洲行动、phigros</b>）</li>
+               <li>看小说</li>
+               <li>看直播</li>
+               <li>跑步</li>
+        </ul>
+      </div>
+   </div>
+   <div class="right">
+      <h2>抬手不是抱歉，是五指拳心剑</h2>
+        <img src="jvysz.jpg">
+        <br>
+        <a href="https://www.bilibili"target="_blank">去B站学编程</a>|<a href="#">未来作品箱</a>
+        <button id="themeBtn">🌙切换夜间模式</button>
+      </div>
+   </div>
+<script>
+    const btn = document.getElementById('themeBtn');
+    const body = document.body;
+    let isNight = false;
+
+    btn.addEventListener('click', () => {
+        if (isNight) {
+            body.style.backgroundColor = '#fdf5e6';
+            body.style.color = '#000000';
+            btn.textContent = '🌙 切换夜间模式';
+        } else {
+            body.style.backgroundColor = '#2c3e50';
+            body.style.color = '#ecf0f1';
+            btn.textContent = '☀️ 切换日间模式';
+        }
+        isNight = !isNight;
+    });
+</script>
+</body>
+</html>
